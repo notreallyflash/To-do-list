@@ -1,0 +1,33 @@
+ul {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 0;
+    list-style-type: none;
+  }
+  
+  li {
+
+    border-radius: 4px;
+    margin-bottom: 8px;
+    padding: 8px;
+    background-color: #d6edec;}
+
+  a {
+    color: #2196F3; 
+    text-decoration: none;
+    font-weight: bold;
+    display: block;
+    font-size: 30px;
+  }
+  
+  a:hover {
+    background-color: #5a58cd; 
+  }
+  h2{
+
+    color: blue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  

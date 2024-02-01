@@ -1,0 +1,8 @@
+
+<div *ngIf="todo">
+  <h2>{{ todo.title }}</h2>
+  <p>{{ todo.description }}</p>
+  <ul>
+    <li *ngFor="let subtask of todo.subtasks">{{ subtask }}</li>
+  </ul>
+</div>
