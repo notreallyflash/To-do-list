@@ -1,5 +1,5 @@
 # Todo list
-## This project is a ppart of the Angular study jam conducted in the month of January-February 2024.
+#### This project is a part of the Angular study jam conducted in the month of January-February 2024.
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 5.2.4.
 
