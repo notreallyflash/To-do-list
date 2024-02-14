@@ -33,6 +33,14 @@ export class TodoService {
     this.updateLocalStorage();
   }
 
+  completed(id: number) {
+    const todo = this.todos.find(todo => todo.id === id);
+    if (todo) {
+      todo.completed = true;
+      this.updateLocalStorage();
+    }
+  }
+
   private updateLocalStorage():void{
     localStorage.setItem('todos',JSON.stringify(this.todos));
   }

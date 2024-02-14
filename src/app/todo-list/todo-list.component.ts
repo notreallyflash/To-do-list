@@ -11,5 +11,13 @@ export class TodoListComponent implements OnInit {
 
   constructor(private todoService: TodoService) {}
 
+  markAsCompleted(id: number) {
+    this.todoService.completed(id);
+  }
+
+  deleteTodo(id: number) {
+    this.todoService.deleteTodo(id);
+  }
+
   ngOnInit(): void {}
 }
