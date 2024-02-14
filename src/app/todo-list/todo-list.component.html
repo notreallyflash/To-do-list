@@ -5,6 +5,7 @@
       <a [routerLink]="['/todos', todo.id]">{{ todo.title }}</a>
     </div>
     <div>
+      <img (click)="deleteTodo(todo.id)" src="../../assets/trash-can-solid.svg" />
       <!-- Have to decide if i want to implement font-awesome, I had trouble with the integration before...but It might work out this time. -->
     </div>
   </li>
