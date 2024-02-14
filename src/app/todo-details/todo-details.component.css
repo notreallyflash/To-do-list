@@ -41,7 +41,9 @@ div {
   .down-section{
     display:flex;
     justify-content:flex-end;
+    align-items:center;
     gap:15px;
+    background-color: #555;
   }
 
   form {
@@ -52,4 +54,12 @@ div {
     align-items: center;
     justify-content: center;
     height: 30vh; 
+  }
+
+  .closebtn{
+    background-color:rgba(22, 46, 181, 0.865);
+    padding:7px;
+    border:none;
+    color:white;
+    font-weight:600;
   }
