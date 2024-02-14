@@ -5,7 +5,7 @@ import { Todo } from './todo.model';
   providedIn: 'root',
 })
 export class TodoService {
-  private todos: Todo[] = [];
+  private todos: Todo[] = JSON.parse(localStorage.getItem('todos') || '[]');
 
   getTodos(): Todo[] {
     return this.todos;
@@ -13,6 +13,7 @@ export class TodoService {
 
   addTodo(todo: Todo): void {
     this.todos.push(todo);
+    this.updateLocalStorage();
   }
 
   getTodoById(id: number): Todo | undefined {
@@ -23,10 +24,16 @@ export class TodoService {
     const index = this.todos.findIndex((todo) => todo.id === updatedTodo.id);
     if (index !== -1) {
       this.todos[index] = updatedTodo;
+      this.updateLocalStorage();
     }
   }
 
   deleteTodo(id: number): void {
     this.todos = this.todos.filter((todo) => todo.id !== id);
+    this.updateLocalStorage();
+  }
+
+  private updateLocalStorage():void{
+    localStorage.setItem('todos',JSON.stringify(this.todos));
   }
 }
