@@ -56,6 +56,19 @@ div {
     height: 30vh; 
   }
 
+  #down{
+    display: flex;
+    justify-content:flex-end;
+    align-items: center;
+    gap:10px;
+    border:none;
+    box-shadow: none;
+  }
+
+  #down > button{
+    padding:7px;
+    border:none;
+  }
   .closebtn{
     background-color:rgba(22, 46, 181, 0.865);
     padding:7px;

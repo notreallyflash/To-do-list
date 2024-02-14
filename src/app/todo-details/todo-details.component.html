@@ -1,4 +1,3 @@
-
 <div *ngIf="todo">
   <h2>{{ todo.title }}</h2>
   <p>{{ todo.description }}</p>
@@ -8,19 +7,28 @@
 </div>
 
 <div class="down-section">
-  <img src="../../assets/pen-to-square-solid.svg" alt="edit-icon" (click)="onEdit()" id="edit-icon">
-  <button (click)="goBack()" class="closebtn" >Close</button>
+  <img
+    src="../../assets/pen-to-square-solid.svg"
+    alt="edit-icon"
+    (click)="onEdit()"
+    id="edit-icon"
+  />
+  <button (click)="goBack()" class="closebtn">Close</button>
 </div>
 
 <form [formGroup]="todoForm" *ngIf="editing" (ngSubmit)="onSave()">
+  <div>
   <label>
     Title:
-    <input formControlName="title">
-  </label>
+    <input formControlName="title" />
+  </label><br><br>
   <label>
     Description:
-    <input formControlName="description">
+    <input formControlName="description" />
   </label>
-  <button type="submit">Save</button>
-  <button type="button" (click)="goBack()" class="closebtn">Cancel</button>
+  <div id="down">
+    <button type="submit">Save</button>
+    <button type="button" (click)="goBack()" class="closebtn">Cancel</button>
+  </div>
+  </div>
 </form>

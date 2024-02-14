@@ -35,11 +35,13 @@ export class TodoDetailComponent implements OnInit {
   }
 
   onSave() {
-    if (this.todo) {
+    if (this.todo && this.todoForm.valid) {
       const updatedTodo = { ...this.todo, ...this.todoForm.value };
       this.todoService.updateTodo(updatedTodo);
       this.editing = false;
       this.locationService.back();
+    } else {
+      alert('Please fill in all fields before saving.');
     }
   }
 
