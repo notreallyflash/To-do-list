@@ -6,3 +6,21 @@
     <li *ngFor="let subtask of todo.subtasks">{{ subtask }}</li>
   </ul>
 </div>
+
+<div class="down-section">
+  <img src="../../assets/pen-to-square-solid.svg" alt="edit-icon" (click)="onEdit()" id="edit-icon">
+  <button (click)="goBack()" >Close</button>
+</div>
+
+<form [formGroup]="todoForm" *ngIf="editing" (ngSubmit)="onSave()">
+  <label>
+    Title:
+    <input formControlName="title">
+  </label>
+  <label>
+    Description:
+    <input formControlName="description">
+  </label>
+  <button type="submit">Save</button>
+  <button type="button" (click)="goBack()">Cancel</button>
+</form>
