@@ -39,6 +39,7 @@ export class TodoDetailComponent implements OnInit {
       const updatedTodo = { ...this.todo, ...this.todoForm.value };
       this.todoService.updateTodo(updatedTodo);
       this.editing = false;
+      this.locationService.back();
     }
   }
 

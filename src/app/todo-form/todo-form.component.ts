@@ -35,6 +35,7 @@ export class TodoFormComponent implements OnInit {
       this.showTodoList = true;
       this.router.navigate(['/todos']);
       this.router.navigate(['/todos']);
+      this.todoForm.reset();
     }
   }
 

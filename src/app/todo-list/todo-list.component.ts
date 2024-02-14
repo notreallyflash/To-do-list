@@ -14,13 +14,13 @@ export class TodoListComponent implements OnInit {
 
   handleClick(id: number) {
     this.isClicked[id] = !this.isClicked[id];
-   }
+  }
 
   constructor(private todoService: TodoService) {}
 
   deleteTodo(id: number) {
     this.todoService.deleteTodo(id);
-    this.todos = this.todos.filter(todo => todo.id !== id);
+    this.todos = this.todos.filter((todo) => todo.id !== id);
   }
 
   ngOnInit(): void {}
