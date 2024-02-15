@@ -1,12 +1,12 @@
 <h2>My Tasks</h2>
 <ul>
-  <li *ngFor="let todo of todos">
+  <li *ngFor="let todo of todos" [class.completed]="todo.completed" (click)="handleClick(todo.id)">
     <div>
       <a [routerLink]="['/todos', todo.id]">{{ todo.title }}</a>
     </div>
     <div>
-      <img (click)="deleteTodo(todo.id)" src="../../assets/trash-can-solid.svg" />
-      <!-- Have to decide if i want to implement font-awesome, I had trouble with the integration before...but It might work out this time. -->
+      <i class="fas fa-check-circle checkbox" (click)="handleClick(todo.id); $event.stopPropagation();"></i>
+      <i class="fas fa-trash deleteBtn" (click)="deleteTodo(todo.id)"></i>
     </div>
   </li>
 </ul>

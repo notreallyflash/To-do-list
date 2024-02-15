@@ -13,7 +13,7 @@ export class TodoListComponent implements OnInit {
   location: any;
 
   handleClick(id: number) {
-    this.isClicked[id] = !this.isClicked[id];
+    this.todoService.toggleCompleted(id); 
   }
 
   constructor(private todoService: TodoService) {}

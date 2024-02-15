@@ -6,13 +6,13 @@ ul {
   }
   
   li {
-
+    
     display: flex;
     align-items: center;
     justify-content: space-between;
     border-radius: 4px;
     margin-bottom: 8px;
-    padding: 8px;
+    padding: 8px 15px;
     background-color: #d6edec;}
 
   a {
@@ -34,9 +34,25 @@ ul {
     align-items: center;
   }
 
-  img{
-    width:20px;
-    height:20px;
-    cursor:pointer;
+  .completed{
+    text-decoration: line-through;
+    color:red;
+  }
+
+  i {
+    font-size:1.3em;
+    margin: 10px;
+    color: #9e9c9c;
+    cursor: pointer;
+    transition: color 0.2s ease-in-out;
+  
+  }
+  
+  i:nth-child(2):hover {
+    color: red;
+  }
+  
+  i:nth-child(1):hover{
+    color:#05b105;
   }
   

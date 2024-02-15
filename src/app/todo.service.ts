@@ -33,10 +33,10 @@ export class TodoService {
     this.updateLocalStorage();
   }
 
-  completed(id: number) {
+  toggleCompleted(id: number) {
     const todo = this.todos.find(todo => todo.id === id);
     if (todo) {
-      todo.completed = true;
+      todo.completed = !todo.completed;
       this.updateLocalStorage();
     }
   }
