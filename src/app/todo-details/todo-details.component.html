@@ -7,28 +7,7 @@
 </div>
 
 <div class="down-section">
-  <img
-    src="../../assets/pen-to-square-solid.svg"
-    alt="edit-icon"
-    (click)="onEdit()"
-    id="edit-icon"
-  />
+  <img src="../../assets/pen-to-square-solid.svg" alt="edit-icon" [routerLink]="['/edit-todo', todo?.id]"
+    id="edit-icon" />
   <button (click)="goBack()" class="closebtn">Close</button>
 </div>
-
-<form [formGroup]="todoForm" *ngIf="editing" (ngSubmit)="onSave()">
-  <div>
-  <label>
-    Title:
-    <input formControlName="title" />
-  </label><br><br>
-  <label>
-    Description:
-    <input formControlName="description" />
-  </label>
-  <div id="down">
-    <button type="submit">Save</button>
-    <button type="button" (click)="goBack()" class="closebtn">Cancel</button>
-  </div>
-  </div>
-</form>
