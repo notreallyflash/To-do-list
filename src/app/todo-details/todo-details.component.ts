@@ -11,11 +11,11 @@ import { Todo } from '../todo.model';
 })
 export class TodoDetailComponent implements OnInit {
   todo: Todo | undefined;
-  
+
   constructor(
     private route: ActivatedRoute,
     private todoService: TodoService,
-    private locationService: Location 
+    private locationService: Location
   ) {}
 
   ngOnInit(): void {
@@ -23,7 +23,7 @@ export class TodoDetailComponent implements OnInit {
     this.todo = this.todoService.getTodoById(todoId);
   }
 
-  goBack(){
+  goBack() {
     this.locationService.back();
   }
 }

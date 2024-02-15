@@ -34,14 +34,14 @@ export class TodoService {
   }
 
   toggleCompleted(id: number) {
-    const todo = this.todos.find(todo => todo.id === id);
+    const todo = this.todos.find((todo) => todo.id === id);
     if (todo) {
       todo.completed = !todo.completed;
       this.updateLocalStorage();
     }
   }
 
-  private updateLocalStorage():void{
-    localStorage.setItem('todos',JSON.stringify(this.todos));
+  private updateLocalStorage(): void {
+    localStorage.setItem('todos', JSON.stringify(this.todos));
   }
 }

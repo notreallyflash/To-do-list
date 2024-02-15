@@ -6,19 +6,17 @@ import { TodoDetailComponent } from './todo-details/todo-details.component';
 import { TodoFormComponent } from './todo-form/todo-form.component';
 import { TodoEditComponent } from './todo-edit/todo-edit.component';
 
-
 //array inside which we are creating paths for different components
 const routes: Routes = [
   { path: 'todos', component: TodoListComponent },
   { path: 'todos/:id', component: TodoDetailComponent },
   { path: 'add-todo', component: TodoFormComponent },
+  { path: 'edit-todo/:id', component: TodoEditComponent },
   { path: '', redirectTo: '/todos', pathMatch: 'full' },
-  { path: 'edit-todo/:id', component: TodoEditComponent }
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule],
 })
-export class AppRoutingModule {
-}
+export class AppRoutingModule {}

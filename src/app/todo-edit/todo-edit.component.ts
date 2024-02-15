@@ -8,16 +8,16 @@ import { Location } from '@angular/common'; // Correct import
 @Component({
   selector: 'app-todo-edit',
   templateUrl: './todo-edit.component.html',
-  styleUrls: ['./todo-edit.component.css']
+  styleUrls: ['./todo-edit.component.css'],
 })
 export class TodoEditComponent implements OnInit {
   todo: Todo | undefined;
   todoForm: FormGroup = new FormGroup({});
-    
+
   constructor(
     private route: ActivatedRoute,
     private todoService: TodoService,
-    private locationService: Location 
+    private locationService: Location
   ) {}
 
   ngOnInit(): void {
@@ -39,7 +39,7 @@ export class TodoEditComponent implements OnInit {
     }
   }
 
-  goBack(){
+  goBack() {
     this.locationService.back();
   }
 }

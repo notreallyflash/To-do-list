@@ -16,16 +16,17 @@ import { TodoEditComponent } from './todo-edit/todo-edit.component';
     TodoListComponent,
     TodoDetailComponent,
     TodoFormComponent,
-    TodoEditComponent
+    TodoEditComponent,
   ],
   imports: [
-    RouterModule, AppRoutingModule,
+    RouterModule,
+    AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
