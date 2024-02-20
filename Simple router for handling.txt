@@ -1,0 +1,35 @@
+// Simple router for handling navigation
+const router = (path) => {
+    // Implement your routing logic here
+    switch (path) {
+        case '/':
+            renderHome();
+            break;
+        case '/tasks':
+            renderTasks();
+            break;
+        default:
+            renderNotFound();
+    }
+};
+
+// Example rendering functions
+const renderHome = () => {
+    document.getElementById('app').innerHTML = '<p>Welcome to the Todo List app!</p>';
+};
+
+const renderTasks = () => {
+    document.getElementById('app').innerHTML = '<p>List of tasks goes here.</p>';
+};
+
+const renderNotFound = () => {
+    document.getElementById('app').innerHTML = '<p>Page not found.</p>';
+};
+
+// Initial route when the page loads
+router(window.location.pathname);
+
+// Handle navigation events
+window.onpopstate = () => {
+    router(window.location.pathname);
+};
