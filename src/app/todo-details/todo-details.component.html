@@ -1,8 +1,12 @@
-
 <div *ngIf="todo">
   <h2>{{ todo.title }}</h2>
   <p>{{ todo.description }}</p>
   <ul>
     <li *ngFor="let subtask of todo.subtasks">{{ subtask }}</li>
   </ul>
+</div>
+
+<div class="down-section">
+  <i class="fas fa-edit" [routerLink]="['/edit-todo', todo?.id]" id="edit-icon"></i>
+  <button (click)="goBack()" class="closebtn">Close</button>
 </div>

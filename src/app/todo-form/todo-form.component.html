@@ -9,12 +9,10 @@
 
   <label for="subtask">Subtasks:</label>
   <textarea id="subtask" formControlName="subtask"></textarea>
-<div class="btn">
-  <button type="submit" [disabled]="!todoForm.valid">Add Task</button>
-  <!-- <button (click)="goToTodoList()">
+  <div class="btn">
+    <button type="submit" [disabled]="!todoForm.valid">Add Task</button>
+    <!-- <button (click)="goToTodoList()">
    <span class="task">Tasks</span> 
   </button> -->
-</div>
+  </div>
 </form>
-
-

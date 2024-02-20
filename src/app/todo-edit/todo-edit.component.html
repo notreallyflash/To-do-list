@@ -1,0 +1,17 @@
+<form [formGroup]="todoForm" (ngSubmit)="onSave()">
+  <div>
+    <label>
+      Title:
+      <input formControlName="title" />
+    </label>
+    <br/><br />
+    <label>
+      Description:
+      <input formControlName="description" />
+    </label>
+    <div id="down">
+      <button type="submit">Save</button>
+      <button type="button" (click)="goBack()" class="closebtn">Cancel</button>
+    </div>
+  </div>
+</form>

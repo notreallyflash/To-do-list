@@ -9,7 +9,19 @@ import { TodoService } from '../todo.service';
 export class TodoListComponent implements OnInit {
   todos = this.todoService.getTodos();
 
+  isClicked: { [id: number]: boolean } = {};
+  location: any;
+
+  handleClick(id: number) {
+    this.todoService.toggleCompleted(id);
+  }
+
   constructor(private todoService: TodoService) {}
+
+  deleteTodo(id: number) {
+    this.todoService.deleteTodo(id);
+    this.todos = this.todos.filter((todo) => todo.id !== id);
+  }
 
   ngOnInit(): void {}
 }

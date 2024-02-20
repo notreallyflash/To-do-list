@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { TodoService } from '../todo.service';
+import { Location } from '@angular/common';
 import { Todo } from '../todo.model';
 
 @Component({
@@ -13,11 +14,16 @@ export class TodoDetailComponent implements OnInit {
 
   constructor(
     private route: ActivatedRoute,
-    private todoService: TodoService
+    private todoService: TodoService,
+    private locationService: Location
   ) {}
 
   ngOnInit(): void {
     const todoId = Number(this.route.snapshot.paramMap.get('id'));
     this.todo = this.todoService.getTodoById(todoId);
+  }
+
+  goBack() {
+    this.locationService.back();
   }
 }
